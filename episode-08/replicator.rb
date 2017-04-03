@@ -19,10 +19,10 @@ class Replicator
     @recipe = recipe
     retrieve_glass
     transport_ingredients_to_glass
+    binding.pry
     mix
     adjust_temperature
     transport_glass_to_replicator_plate
-    # binding.pry
   end
 
   def retrieve_glass
