@@ -1,3 +1,4 @@
+require 'pry'
 class Replicator
 
   attr_reader :plate
@@ -20,6 +21,7 @@ class Replicator
     transport_ingredients_to_glass
     mix
     adjust_temperature
+    # binding.pry
     transport_glass_to_replicator_plate
   end
 
