@@ -1,3 +1,4 @@
+require 'pry'
 class Replicator
 
   attr_reader :plate
@@ -21,6 +22,7 @@ class Replicator
     mix
     adjust_temperature
     transport_glass_to_replicator_plate
+    # binding.pry
   end
 
   def retrieve_glass
@@ -74,7 +76,6 @@ class Replicator
   end
 
   def transport_glass_to_replicator_plate
-    return
     @enterprise.transporter.energize(obj: glass_in_tummy, from: @tummy, to: @plate)
   end
 
