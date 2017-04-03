@@ -1,3 +1,4 @@
+require 'pry'
 class Replicator
 
   attr_reader :plate
@@ -17,8 +18,10 @@ class Replicator
   def replicate(recipe)
     @recipe = recipe
     retrieve_glass
+    # binding.pry
     transport_ingredients_to_glass
     mix
+    adjust_temperature
     transport_glass_to_replicator_plate
   end
 
